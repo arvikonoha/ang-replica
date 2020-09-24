@@ -283,6 +283,9 @@
       </div>
     </section>
     <hr />
+    <div class="modal-container">
+      <div class="content"></div>
+    </div>
     <footer style="align-items: center" class="flex-wrapper" id="main-footer">
       <div class="flex-item">
         <div style="align-items: center" class="brand-wrap flex-wrapper">
@@ -355,7 +358,105 @@
         setTimeout(animateTaglines, 4000);
       }
 
+      const reaAdMoreBtns = document.querySelectorAll('a[href="#read-more"');
+
+      reaAdMoreBtns.forEach((btn) => {
+        btn.addEventListener("click", (event) => {
+          event.preventDefault();
+
+          const moduleCard = event.target.closest(".module-card");
+
+          const modal = document.querySelector(".modal-container");
+
+          modal.classList.add("active");
+
+          const modalContent = document.querySelector(
+            ".modal-container .content"
+          );
+
+          const index = moduleCard.dataset.infoIndex;
+
+          const info = data[index];
+
+          modalContent.innerHTML = `<h1>${info.title}</h1>
+                                  <p>${info.paragraph}</p>`;
+
+          if (info.hasList)
+            modalContent.innerHTML += `<ul class="stylized-list">
+                                    ${info.list
+                                      .map((item) => `<li>${item}</li>`)
+                                      .join("")}
+                                    </ul>`;
+        });
+      });
+
+      const modal = document.querySelector(".modal-container");
+
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) event.target.classList.remove("active");
+      });
+
       setTimeout(animateTaglines, 4000);
+
+      var data = [
+        {
+          hasList: true,
+          title: "Tuning into you",
+          paragraph:
+            "7 steps process to reconnect to who you are , ANG helps you through this sesion to discover who you are, Your Potential and get connected to your Passion. Learn how to -",
+          list: [
+            "Identify what Thriving means to you",
+            "Discover what you really want",
+            "Remember your Gifts, talents and strengths",
+            "Clear your path",
+            "Make you a priority",
+            "Create a plan to move forward",
+            "Believe and start looking for opportunities.",
+          ],
+        },
+        {
+          hasList: false,
+          title: "The Entrepreneur in you",
+          paragraph:
+            "Our energetic young creators are full of ideas and creativity which helps them grow as a brand as well as support the existing ones. Connecting the ideas and getting them to build a Startup while on the other end young budding solutions enable the existing ones to accelerate their business. Giving a hands on experience in the field of entrepreneurship and boost the entrepreneur in each one. From Curating Ideas to Building them. ",
+        },
+        {
+          hasList: false,
+          title: "Undaunted Goals ",
+          paragraph:
+            "Fearless towards your goal and passion, A workshop to get your aspirations become undaunted goals not frightened or discouraged, despite problems or lack of success undaunted by the threshold, and we help you meet your desired goal. You need to know why you are doing all of that. And that's exactly where we start our journey. We identify your motivation. Your reason. Your WHY! We help you identify your dreams, and we make you achieve them, and this Workshop will spike a motivation you have never experienced so far. Then we work on your HOW. And you will learn ",
+        },
+        {
+          hasList: false,
+          title: "Employability and Job Skills Training",
+          paragraph:
+            "A program that provides the right kind of influences and mentorship to update individuals with industry Acumen and train them on industry required skill sets. Bridging the skill Gap and Unemployability . Get Work Ready! ",
+        },
+        {
+          hasList: false,
+          title: "What is your why?",
+          paragraph:
+            "What makes you jump out of bed every morning? What makes your face light up with your smile? Find your purpose and inner calling with ANG",
+        },
+        {
+          hasList: false,
+          title: "Behavioural Skills and Etiquette Training",
+          paragraph:
+            "Behavioural skills training is a blend of interpersonal relationships , effective communication ,engaging attitude and productive emotions. This workshop aids individuals to analyse their existing behaviour patterns and train them with new skills to recognise new patterns to achieve better results. A program that is a key part of leadership training. ",
+        },
+        {
+          hasList: false,
+          title: "Personality Development Training",
+          paragraph:
+            "Personality development helps you develop an impressive personality and makes you stand apart from the rest. In our Workshop of Personality development we explain the essential role in improving one's communication skills. Individuals ought to master the art of expressing their thoughts and feelings in the most desired way,We give you an entire Workshop to understand this art and implement them.",
+        },
+        {
+          hasList: true,
+          title: "Confidence Building",
+          paragraph:
+            "Confidence doesn't compensate for a lack of skill or hard work, but it helps amplify If YOU feel your lack of confidence is pulling you down from success,Here are ways ANG helps you to build confidence ",
+        },
+      ];
     </script>
   </body>
 </html>

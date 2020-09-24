@@ -168,18 +168,18 @@
 #mission-section h1,
 #directors-section h1,
 #main-footer h1,
-#modules > h1 {
+#modules>h1 {
   font-size: 2.4rem;
   color: #414347;
   padding: 16px;
 }
 
-#modules > h1 {
+#modules>h1 {
   text-align: center;
   margin-bottom: 2rem;
 }
 
-#modules > div {
+#modules>div {
   flex-wrap: wrap;
 }
 
@@ -216,7 +216,7 @@
   font-size: 1.6em;
 }
 
-.module-card > #directors-section h1 {
+.module-card>#directors-section h1 {
   text-align: center;
   font-size: 4rem;
   text-shadow: 2px 2px 0px #a1a1a175;
@@ -413,6 +413,43 @@ hr {
   #mission-section .flex-item:nth-child(2) {
     padding-left: 0;
   }
+}
+
+.modal-container.active {
+  display: flex;
+}
+
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  justify-content: center;
+  background-color: #00000091;
+}
+
+.modal-container .content {
+  padding: 16px;
+  background-color: #fff;
+  max-width: 600px;
+  align-self: center;
+  cursor: initial;
+  color: #34363b;
+}
+
+.modal-container .content h1 {
+  padding: 8px 0;
+  border-bottom: #0000001c 1px solid;
+  margin-bottom: 16px;
+}
+
+.modal-container .content p {
+  padding: 8px;
+  line-height: 1.6rem;
 }
 
 .paragraph-starter {
