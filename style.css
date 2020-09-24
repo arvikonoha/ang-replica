@@ -401,6 +401,7 @@ hr {
     display: block;
     max-width: 80%;
     height: auto;
+    margin: auto;
     flex-basis: 80%;
     padding: 16px;
   }
