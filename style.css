@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap");
 
 * {
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   padding: 0;
   margin: 0;
 }
-
 
 #main-header {
   position: sticky;
@@ -14,13 +13,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: .2s ease-in-out all;
+  transition: 0.2s ease-in-out all;
 }
 
 #main-header.scrolled {
   background-color: #fff;
   z-index: 1;
-  box-shadow: 0px 1px 2px .2px rgba(0, 0, 0, .2);
+  box-shadow: 0px 1px 2px 0.2px rgba(0, 0, 0, 0.2);
 }
 
 #main-header img {
@@ -45,14 +44,13 @@
 
 .hamburger::after,
 .hamburger::before {
-  content: '';
+  content: "";
   width: 32px;
   height: inherit;
   position: absolute;
   background-color: inherit;
   right: 0;
-  transition: ease-in .2s all;
-
+  transition: ease-in 0.2s all;
 }
 
 .hamburger::after {
@@ -67,7 +65,7 @@
 .hamburger.active::before {
   right: -4px;
   width: 16px;
-  transition: ease-in .2s all;
+  transition: ease-in 0.2s all;
 }
 
 .hamburger.active::after {
@@ -89,7 +87,7 @@
   background-color: #fff;
   left: 100%;
   top: 0;
-  transition: ease-in .4s transform;
+  transition: ease-in 0.4s transform;
 }
 
 #main-header #side-navbar.active {
@@ -107,7 +105,7 @@
   color: #000000af;
   text-decoration: none;
   font-weight: bold;
-  transition: ease .2s transform;
+  transition: ease 0.2s transform;
 }
 
 #main-header #side-navbar ul li a:hover {
@@ -118,8 +116,7 @@
   background-color: #0000001c;
 }
 
-@media (min-width:900px) {
-
+@media (min-width: 900px) {
   #main-header img {
     padding: 12px 24px;
     width: 64px;
@@ -146,7 +143,7 @@
     color: #000000da;
     font-weight: bold;
     text-decoration: none;
-    transition: ease .2s transform;
+    transition: ease 0.2s transform;
   }
 
   #main-header #main-navbar ul li a:hover {
@@ -171,23 +168,22 @@
 #mission-section h1,
 #directors-section h1,
 #main-footer h1,
-#modules>h1 {
+#modules > h1 {
   font-size: 2.4rem;
   color: #414347;
   padding: 16px;
 }
 
-#modules>h1 {
+#modules > h1 {
   text-align: center;
   margin-bottom: 2rem;
 }
 
-#modules>div {
+#modules > div {
   flex-wrap: wrap;
 }
 
 .module-card {
-
   margin: 8px;
   flex: 1 0 300px;
   color: #34363b;
@@ -206,7 +202,7 @@
   align-items: center;
   background-color: #34363b;
   color: #fff;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 .module-card a {
@@ -216,11 +212,11 @@
 }
 
 .module-card h1 {
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
   font-size: 1.6em;
 }
 
-.module-card>#directors-section h1 {
+.module-card > #directors-section h1 {
   text-align: center;
   font-size: 4rem;
   text-shadow: 2px 2px 0px #a1a1a175;
@@ -268,7 +264,7 @@
   flex: 0 1 88px;
   margin: 4px;
   padding: 24px;
-  box-shadow: 1px 1px 3px .4px rgba(0, 0, 0, .2);
+  box-shadow: 1px 1px 3px 0.4px rgba(0, 0, 0, 0.2);
 }
 
 .card-wrap {
@@ -296,9 +292,9 @@
 }
 
 .director-name {
-  font-size: .8rem;
+  font-size: 0.8rem;
   color: #34363b;
-  margin-bottom: .4em;
+  margin-bottom: 0.4em;
 }
 
 .director-card:nth-child(2) .director-name {
@@ -310,11 +306,11 @@
 }
 
 .director-role {
-  font-size: .6rem;
+  font-size: 0.6rem;
   color: #34363bc4;
 }
 
-@media (min-width:600px) {
+@media (min-width: 600px) {
   .director-card {
     flex: 0 1 140px;
   }
@@ -329,25 +325,24 @@
     margin-bottom: 16px;
   }
 
-
   .director-name {
     font-size: 1rem;
   }
 
   .director-card:nth-child(2) .director-name {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   .director-card:nth-child(2) .director-role {
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
 
   .director-role {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
 
-@media (min-width:1000px) {
+@media (min-width: 1000px) {
   .director-card {
     flex: 0 1 200px;
   }
@@ -362,7 +357,6 @@
     margin-bottom: 16px;
   }
 
-
   .director-name {
     font-size: 1.2rem;
   }
@@ -372,14 +366,13 @@
   }
 
   .director-card:nth-child(2) .director-role {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   .director-role {
     font-size: 1rem;
   }
 }
-
 
 #welcome-image {
   flex: 1 0 30%;
@@ -398,7 +391,7 @@ hr {
   color: #34363b1f;
 }
 
-@media (max-width:1000px) {
+@media (max-width: 1000px) {
   .flex-wrapper {
     flex-wrap: wrap;
   }
@@ -406,6 +399,8 @@ hr {
   #welcome-image,
   #mission-image {
     display: block;
+    max-width: 100%;
+    height: auto;
     flex-basis: 80%;
     padding: 16px;
   }
@@ -417,7 +412,6 @@ hr {
   #mission-section .flex-item:nth-child(2) {
     padding-left: 0;
   }
-
 }
 
 .paragraph-starter {
@@ -428,7 +422,7 @@ hr {
 #tag-lines {
   overflow: hidden;
   font-weight: bold;
-  transition: ease-in-out transform .4s;
+  transition: ease-in-out transform 0.4s;
 }
 
 .stylized-list {
@@ -451,7 +445,6 @@ hr {
   margin-bottom: 64px;
   height: 54px;
   overflow: hidden;
-
 }
 
 .service-card {
@@ -465,19 +458,17 @@ hr {
   align-items: center;
 }
 
-@media (max-width:900px) {
-
-
+@media (max-width: 900px) {
   .service-card {
     flex: 1 0 140px;
-    font-size: .8rem;
+    font-size: 0.8rem;
     padding: 16px;
   }
 }
 
-@media (max-width:600px) {
+@media (max-width: 600px) {
   .service-card {
-    font-size: .6rem;
+    font-size: 0.6rem;
     padding: 16px;
   }
 }
@@ -487,10 +478,9 @@ hr {
   font-size: 1.8em;
 }
 
-
 .service-card li {
   text-align: left;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
 }
 
 .service-card ul {
@@ -508,24 +498,22 @@ hr {
 }
 
 .service-card:nth-child(1) li::marker {
-  content: '\f057';
+  content: "\f057";
   font-family: "Font Awesome 5 Free";
   font-size: 1.6em;
 }
 
 .service-card:nth-child(2) li::marker {
-  content: '\f058';
+  content: "\f058";
   font-family: "Font Awesome 5 Free";
   font-size: 1.6em;
 }
 
 .service-card .main-icon {
   font-size: 4.4rem;
-
 }
 
 #tag-lines li {
-
   list-style: none;
   text-align: center;
   display: flex;
@@ -536,7 +524,7 @@ hr {
   border-bottom: 1px solid #0000002a;
 }
 
-@media (min-width:600px) {
+@media (min-width: 600px) {
   .m-container {
     width: 80%;
     margin: auto;
